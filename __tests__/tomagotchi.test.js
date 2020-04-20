@@ -33,7 +33,7 @@ describe('Tamo', () => {
   // decreaseHappiness
   test('should test happiness lvls are decreasing', () => {
     jest.advanceTimersByTime(60001);
-    expect(jeff.happiness).toEqual(5);
+    expect(jeff.happiness).toEqual(4);
   });
 
 });
