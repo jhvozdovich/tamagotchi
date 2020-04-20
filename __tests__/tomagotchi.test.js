@@ -12,6 +12,7 @@ describe('Tamo', () => {
     expect(jeff.hunger).toEqual(5);
     expect(jeff.happiness).toEqual(5);
     expect(jeff.health).toEqual(10);
+    expect(jeff.alive).toEqual(true);
   });
 });
 
