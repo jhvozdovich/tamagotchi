@@ -9,27 +9,31 @@ export class Tamo {
 
   decreaseHunger() {
     setInterval(() => {
-      this.hunger--;
+      if (this.hunger !== 0) {
+        this.hunger--;
+      }
     }, 3600000);
   }
 
   decreaseHappiness() {
     setInterval (() => {
-      this.happiness --;
+      if (this.happiness !== 0) {
+        this.happiness --;
+      }
     }, 3600000);
-  }
+  } 
   
   decreaseHealth() {
     setInterval (() => { 
       if (this.health <= 0) {
         this.alive = false;
-      } else if (this.hunger <= 0 && this.happiness <= 0) {
+      } else if (this.hunger === 0 && this.happiness === 0) {
         // setTimeout(() => { 
         this.health -= 2;
         //   this.decreaseHealth();
         // }, 3600000);
         
-      } else if (this.hunger <= 0 || this.happiness <= 0) {
+      } else if (this.hunger === 0 || this.happiness === 0) {
         // setTimeout(() => {
         this.health -= 1;
         //   this.decreaseHealth();
