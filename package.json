@@ -7,7 +7,7 @@
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "jest --colors",
+    "test": "jest --coverage",
     "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [
