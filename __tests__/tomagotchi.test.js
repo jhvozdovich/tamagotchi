@@ -2,7 +2,6 @@ import { Tamo } from "./../src/tomagotchi";
 import { Player } from "./../src/tomagotchi";
 
 
-
 describe('Tamo', () => {
   let jeff;
   beforeEach (() => {

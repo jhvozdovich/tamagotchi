@@ -1,17 +1,16 @@
 export class Tamo {
   constructor (name) {
-    // this.name = name;
-    // this.hunger = 5;
-    // this.happiness = 5;
-    // this.health = 10;
+    this.name = name;
+    this.hunger = 5;
+    this.happiness = 5;
+    this.health = 10;
   }
 }
 
 export class Player {
   constructor (name, inventory) {
-    // this.name = name;
-    // this.inventory = inventory || [];
-
+    this.name = name;
+    this.inventory = inventory || [];
   }
 }
 
