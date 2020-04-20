@@ -5,7 +5,6 @@ export class Tamo {
     this.happiness = 5;
     this.health = 10;
     this.alive = true;
-    // this.healthInterval = setInterval(this.decreaseHealth, 360000);
   }
 
   decreaseHunger() {
@@ -21,26 +20,22 @@ export class Tamo {
   }
   
   decreaseHealth() {
-    if (this.health <= 0) {
-      this.alive = false;
-      return this.alive;
-    } else if (this.hunger === 0 && this.happiness === 0) {
-      setTimeout(() => { 
+    setInterval (() => { 
+      if (this.health <= 0) {
+        this.alive = false;
+      } else if (this.hunger <= 0 && this.happiness <= 0) {
+        // setTimeout(() => { 
         this.health -= 2;
-        this.decreaseHealth();
-      }, 3600000);
-      
-    } else if (this.hunger === 0 || this.happiness === 0) {
-      setTimeout(() => {
+        //   this.decreaseHealth();
+        // }, 3600000);
+        
+      } else if (this.hunger <= 0 || this.happiness <= 0) {
+        // setTimeout(() => {
         this.health -= 1;
-        this.decreaseHealth();
-      },  3600000);
-    } 
-    // else {
-    //   setInterval(() => {
-    //     this.decreaseHealth();
-    //   }, 3600000);
-    // }
+        //   this.decreaseHealth();
+        // },  3600000);
+      } 
+    }, 3600000);
   }
 }
 
