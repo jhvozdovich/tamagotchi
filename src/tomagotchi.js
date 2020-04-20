@@ -13,11 +13,11 @@ export class Tamo {
     }, 60000);
   }
 
-  // decreaseHappiness() {
-  //   setInterval (() => {
-  //     this.happiness --;
-  //   }, 60000);
-  // }
+  decreaseHappiness() {
+    setInterval (() => {
+      this.happiness --;
+    }, 60000);
+  }
   
 //   decreaseHealth() {
 //     if (this.hunger === 0 && this.happiness === 0) {

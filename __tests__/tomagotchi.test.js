@@ -9,6 +9,7 @@ describe('Tamo', () => {
   beforeEach (() => {
     jeff = new Tamo("Jeff");
     jeff.decreaseHunger();
+    jeff.decreaseHappiness();
   });
 
   afterEach(() => {
@@ -30,10 +31,10 @@ describe('Tamo', () => {
   });
 
   // decreaseHappiness
-  // test('should test happiness lvls are decreasing', () => {
-  //   jest.advanceTimersByTime(60001);
-  //   expect(jeff.happiness).toEqual(5);
-  // });
+  test('should test happiness lvls are decreasing', () => {
+    jest.advanceTimersByTime(60001);
+    expect(jeff.happiness).toEqual(5);
+  });
 
 });
 
