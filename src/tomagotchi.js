@@ -10,26 +10,26 @@ export class Tamo {
   decreaseHunger() {
     setInterval(() => {
       this.hunger--;
-    }, 60000);
+    }, 3600000);
   }
 
   decreaseHappiness() {
     setInterval (() => {
       this.happiness --;
-    }, 60000);
+    }, 3600000);
   }
   
-//   decreaseHealth() {
-//     if (this.hunger === 0 && this.happiness === 0) {
-//       setInterval (() => {
-//         this.health -= 2;
-//       }, 60000);
-//     } else if (this.hunger === 0 || this.happiness === 0) {
-//       setInterval (() => {
-//         this.health -= 1;
-//       }, 60000);
-//     }
-//   }
+  decreaseHealth() {
+    if (this.hunger === 0 && this.happiness === 0) {
+      setInterval (() => {
+        this.health -= 2;
+      }, 3600000);
+    } else if (this.hunger === 0 || this.happiness === 0) {
+      setInterval (() => {
+        this.health -= 1;
+      }, 3600000);
+    }
+  }
 }
 
 export class Player {
