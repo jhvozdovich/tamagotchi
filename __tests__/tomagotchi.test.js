@@ -26,11 +26,8 @@ describe('Tamo', () => {
   // decreaseHunger fail
   test('should test hunger lvls are decreasing', () => {
     jest.advanceTimersByTime(60001);
-    expect(jeff.hunger).toEqual(5);
+    expect(jeff.hunger).toEqual(4);
   });
-
-  // // decreaseHunger pass
-  // test('')
 
   // decreaseHappiness
   // test('should test happiness lvls are decreasing', () => {
