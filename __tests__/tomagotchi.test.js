@@ -3,10 +3,18 @@ import { Player } from "./../src/tomagotchi";
 
 
 describe('Tamo', () => {
+  jest.useFakeTimers();
   let jeff;
+
   beforeEach (() => {
     jeff = new Tamo("Jeff");
+    jeff.decreaseHunger();
   });
+
+  afterEach(() => {
+    jest.clearAllTimers();
+  });
+  
   test('should create a new character with a name and levels for hunger, happiness, health', () => {
     expect(jeff.name).toEqual("Jeff");
     expect(jeff.hunger).toEqual(5);
@@ -14,6 +22,22 @@ describe('Tamo', () => {
     expect(jeff.health).toEqual(10);
     expect(jeff.alive).toEqual(true);
   });
+
+  // decreaseHunger fail
+  test('should test hunger lvls are decreasing', () => {
+    jest.advanceTimersByTime(60001);
+    expect(jeff.hunger).toEqual(5);
+  });
+
+  // // decreaseHunger pass
+  // test('')
+
+  // decreaseHappiness
+  // test('should test happiness lvls are decreasing', () => {
+  //   jest.advanceTimersByTime(60001);
+  //   expect(jeff.happiness).toEqual(5);
+  // });
+
 });
 
 describe('Player', () => {
