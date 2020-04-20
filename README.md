@@ -43,8 +43,11 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 | **Pet can be fed with food items** | User Input:”Click-Feed Pet, Click-Grapes” | Output: “Hunger status-Full” |
 | **Pet wants to play** | User Input:”Click-Emotional Status” | Output: “Bored” |
 | **User can play with pet using toy items** | User Input:”Click-Play, Click-Ball” | Output: “Happy” |
-| **Pet sleeps** | User Input:”Click-Play” | Output: “Can’t play, pet is sleeping!” |
-
+| **Pet poops** | User Input:”Click-clean poop” | Output: “Stress Decreases” |
+| **Pet sleeps** | User Input:”Click-play" | Output: “Can't play-pet is sleeping!” |
+| **Turn lights on and off** | User Input:”Click-light” | Output: “Turns light off.” |
+| **Pet gets sick** | User Input:”Click-medicine” | Output: “Pet is healthy again!” |
+| **Pet progresses through four life stages based on care** | User Input:”Wait 30 minutes” | Output: “Grow from baby to child!” |
 
 ### License
 
