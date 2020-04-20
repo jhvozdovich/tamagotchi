@@ -10,7 +10,6 @@ describe('Tamo', () => {
     jeff = new Tamo("Jeff");
     jeff.decreaseHunger();
     jeff.decreaseHappiness();
-    jeff.decreaseHealth();
   });
 
   afterEach(() => {
@@ -26,17 +25,20 @@ describe('Tamo', () => {
   });
 
   test('should test hunger lvls are decreasing (decrease 1 per hour)', () => {
-    jest.advanceTimersByTime(3600001);
+    jest.advanceTimersByTime(3601);
     expect(jeff.hunger).toEqual(4);
   });
 
   test('should test happiness lvls are decreasing (decrease 1 per hour)', () => {
-    jest.advanceTimersByTime(3600001);
+    jest.advanceTimersByTime(3601);
     expect(jeff.happiness).toEqual(4);
   });
 
   test('should test if health levels are decreasing', () => {
-    jest.advanceTimersByTime(18000001);
+    jest.advanceTimersByTime(18001);
+    console.log("HAPPINESS: ", jeff.happiness);
+    jeff.decreaseHealth();
+    jest.advanceTimersByTime(3601);
     expect(jeff.health).toEqual(8);
   });
 });
