@@ -37,9 +37,9 @@ export class Tama {
 }
 
 export class Player {
-  constructor (name, inventory) {
+  constructor (name) {
     this.name = name;
-    this.inventory = inventory || [];
+    this.inventory = [];
   }
 
   pickUpItem(item) {
@@ -51,22 +51,23 @@ export class Player {
   }
 
   useItem(item, tama){
-    // if (this.inventory.includes(item)){
-    //   if (item.type === "food" && tama.hunger < 7 && item.snackStatus === "true") {
-    //     tama.hunger += item.value;
-    //     tama.happiness += item.value;
-    //   } else if (item.type === "food" && tama.hunger < 7) {
-    //     tama.hunger += item.value;
-    //   } else if (item.type === "toy" && tama.happiness < 7) {
-    //     tama.happiness += item.value;
-    //   } else if (tama.hunger >= 7) {
-    //     return `${tama.name} is full!`;
-    //   } else if (tama.happiness >= 7) {
-    //     return `${tama.name} is tired!`;
-    //   }
-    // } else {
-    //   return "You don't have this item!";
-    // }  
+    if (this.inventory.includes(item)){
+      if (item.type === "food" && tama.hunger < 7 && item.snackStatus === true) {
+        tama.hunger += item.value;
+        tama.happiness += item.value;
+      } 
+      else if (item.type === "food" && tama.hunger < 7) {
+        // tama.hunger += item.value;
+      } else if (item.type === "toy" && tama.happiness < 7) {
+        // tama.happiness += item.value;
+      } else if (tama.hunger >= 7) {
+        // return `${tama.name} is full!`;
+      } else if (tama.happiness >= 7) {
+        // return `${tama.name} is tired!`;
+      }
+    } else {
+      return "You don't have this item!";
+    }  
   }
 }
 
