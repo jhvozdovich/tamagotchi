@@ -51,6 +51,13 @@ export class Item {
   }
 }
 
+export class Food extends Item {
+  // constructor (name, type, value, snackStatus) {
+  //   super(name, type, value);
+  //   this.snackStatus = snackStatus;
+  // }
+}
+
 // export class LifeCycle {
 //   constructor (egg, toddler, tween, teen, adult) {
 //     this.egg = egg;

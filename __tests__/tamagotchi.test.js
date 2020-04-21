@@ -1,6 +1,7 @@
 import { Tama } from "./../src/tamagotchi";
 import { Player } from "./../src/tamagotchi";
 import { Item } from "./../src/tamagotchi";
+import { Food } from "./../src/tamagotchi";
 
 
 describe('Tama', () => {
@@ -65,6 +66,16 @@ describe('Item', () => {
     expect(ball.name).toEqual("Ball");
     expect(ball.type).toEqual("toy");
     expect(ball.value).toEqual(1);
+  });
+});
+
+describe('Food', () => {
+  test('should create a new food item with a name, type, and value', () => {
+    let carrot = new Item("Carrot", "food", 1, false);
+    expect(carrot.name).toEqual("Carrot");
+    expect(carrot.type).toEqual("food");
+    expect(carrot.value).toEqual(1);
+    expect(carrot.snackStatus).toEqual(false);
   });
 });
 
