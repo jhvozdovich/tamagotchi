@@ -76,6 +76,14 @@ describe('Player', () => {
     expect(jeff.hunger).toEqual(6);
     expect(jeff.happiness).toEqual(6);
   });
+
+  test("should let a player use a food item on a tama", () => {
+    let carrot = new Food("Carrot", "food", 1, false);
+    bloop.pickUpItem(carrot);
+    console.log(bloop.inventory);
+    bloop.useItem(carrot, jeff);
+    expect(jeff.hunger).toEqual(6);
+  });
 });
 
 describe('Item', () => {
