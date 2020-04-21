@@ -42,12 +42,22 @@ describe('Tama', () => {
     expect(jeff.health).toEqual(8);
   });
 
-  test('should test if health decreases by 1 if one stat is not at 0', () => {
+  test('should test if health decreases by 1 if one stat (happiness) is not at 0', () => {
     let bloop = new Player ("Bloop");
     let gameboy = new Item("GameBoy", "toy", 2);
     bloop.pickUpItem(gameboy);
     jest.advanceTimersByTime(10800000);
     bloop.useItem(gameboy, jeff);
+    jest.advanceTimersByTime(7200001);
+    expect(jeff.health).toEqual(9);
+  });
+
+  test('should test if health decraeses by 1 if one stat (hunger) is not at 0', () => {
+    let bloop = new Player ("Bloop");
+    let roast = new Food("Roast", "food", 2, false);
+    bloop.pickUpItem(roast);
+    jest.advanceTimersByTime(10800000);
+    bloop.useItem(roast, jeff);
     jest.advanceTimersByTime(7200001);
     expect(jeff.health).toEqual(9);
   });
