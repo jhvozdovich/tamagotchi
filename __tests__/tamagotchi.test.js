@@ -51,8 +51,10 @@ describe('Tama', () => {
 
 describe('Player', () => {
   let bloop;
+  let jeff;
   beforeEach (() => {
     bloop = new Player ("Bloop");
+    jeff = new Tama("Jeff");
   });
 
   test('should create a new character with a name and levels for hunger, happiness, health', () => {
@@ -64,6 +66,13 @@ describe('Player', () => {
     let ball = new Item("Ball", "toy", 1);
     bloop.pickUpItem(ball);
     expect(bloop.inventory).toEqual([ball]);
+  });
+
+  test("should let a player use a food item on a tama", () => {
+    let carrot = new Food("Carrot", "food", 1, false);
+    bloop.pickUpItem(carrot);
+    bloop.useItem(carrot, jeff);
+    expect(jeff.hunger).toEqual(6);
   });
 });
 
