@@ -43,7 +43,7 @@ export class Player {
   }
 
   pickUpItem(item) {
-    if(this.inventory.length < 6) {
+    if(this.inventory.length <= 5) {
       this.inventory.push(item);
     } else {
       return "Your bag is full!";

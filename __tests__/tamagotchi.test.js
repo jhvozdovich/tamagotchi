@@ -132,6 +132,19 @@ describe('Player', () => {
     let ball = new Item("Ball", "toy", 1);
     expect(bloop.useItem(ball, jeff)).toEqual("You don't have this item!");
   });
+
+  test("should return bag is full", () => {
+    let ball = new Item("Ball", "toy", 1);
+    bloop.pickUpItem(ball);
+    bloop.pickUpItem(ball);
+    bloop.pickUpItem(ball);
+    bloop.pickUpItem(ball);
+    bloop.pickUpItem(ball);
+    bloop.pickUpItem(ball);
+    expect(bloop.pickUpItem(ball)).toEqual("Your bag is full!");
+    bloop.pickUpItem(ball);
+    expect(bloop.inventory.length).toEqual(6);
+  });
 });
 
 describe('Item', () => {
