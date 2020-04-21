@@ -77,5 +77,13 @@ describe('Food', () => {
     expect(carrot.value).toEqual(1);
     expect(carrot.snackStatus).toEqual(false);
   });
+
+  test('should create a new snack food item with a name, type, and value', () => {
+    let chocolate = new Food("Chocolate", "food", 1, true);
+    expect(chocolate.name).toEqual("Chocolate");
+    expect(chocolate.type).toEqual("food");
+    expect(chocolate.value).toEqual(1);
+    expect(chocolate.snackStatus).toEqual(true);
+  });
 });
 
