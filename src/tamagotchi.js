@@ -56,8 +56,7 @@ export class Player {
       if (item.type === "food" && tama.hunger < 7 && item.snackStatus === true) {
         tama.hunger += item.value;
         tama.happiness += item.value;
-      } 
-      else if (item.type === "food" && tama.hunger < 7) {
+      } else if (item.type === "food" && tama.hunger < 7) {
         tama.hunger += item.value;
       } else if (item.type === "toy" && tama.happiness < 7) {
         tama.happiness += item.value;

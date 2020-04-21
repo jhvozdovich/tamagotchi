@@ -42,6 +42,16 @@ describe('Tama', () => {
     expect(jeff.health).toEqual(8);
   });
 
+  test('should test if health decreases by 1 if one stat is not at 0', () => {
+    let bloop = new Player ("Bloop");
+    let gameboy = new Item("GameBoy", "toy", 2);
+    bloop.pickUpItem(gameboy);
+    jest.advanceTimersByTime(10800000);
+    bloop.useItem(gameboy, jeff);
+    jest.advanceTimersByTime(7200001);
+    expect(jeff.health).toEqual(9);
+  });
+
   test('should test if a tomagotchi has died', () => {
     jest.advanceTimersByTime(18000001);
     jest.advanceTimersByTime(18000001);
