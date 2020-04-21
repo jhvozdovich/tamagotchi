@@ -159,6 +159,23 @@ describe('Player', () => {
     bloop.pickUpItem(carrot);
     expect(bloop.removeItem(ball)).toEqual([chocolate, carrot]);
   });
+
+  test("should let a player use a snack food item on a tama and remove it from the inventory", () => {
+    let chocolate = new Food("Chocolate", "food", 1, true);
+    bloop.pickUpItem(chocolate);
+    bloop.useItem(chocolate, jeff);
+    expect(bloop.inventory).toEqual([]);
+  });
+
+  // test("should let a player use a food item on a tama", () => {
+  //   let carrot = new Food("Carrot", "food", 1, false);
+  //   let chocolate = new Food("Chocolate", "food", 1, true);
+  //   bloop.pickUpItem(chocolate);
+  //   bloop.pickUpItem(carrot);
+  //   bloop.useItem(carrot, jeff);
+  //   expect(jeff.inventory).toEqual([chocolate]);
+  // });
+
 });
 
 describe('Item', () => {
