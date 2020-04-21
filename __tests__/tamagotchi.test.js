@@ -71,7 +71,6 @@ describe('Player', () => {
   test("should let a player use a snack food item on a tama", () => {
     let chocolate = new Food("Chocolate", "food", 1, true);
     bloop.pickUpItem(chocolate);
-    console.log(bloop.inventory);
     bloop.useItem(chocolate, jeff);
     expect(jeff.hunger).toEqual(6);
     expect(jeff.happiness).toEqual(6);
@@ -80,9 +79,15 @@ describe('Player', () => {
   test("should let a player use a food item on a tama", () => {
     let carrot = new Food("Carrot", "food", 1, false);
     bloop.pickUpItem(carrot);
-    console.log(bloop.inventory);
     bloop.useItem(carrot, jeff);
     expect(jeff.hunger).toEqual(6);
+  });
+
+  test("should let a player use a toy item on a tama", () => {
+    let ball = new Item("Ball", "toy", 1);
+    bloop.pickUpItem(ball);
+    bloop.useItem(ball, jeff);
+    expect(jeff.happiness).toEqual(6);
   });
 });
 
