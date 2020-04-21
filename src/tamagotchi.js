@@ -64,7 +64,7 @@ export class Player {
       } else if (tama.hunger >= 7) {
         return `${tama.name} is full!`;
       } else if (tama.happiness >= 7) {
-        // return `${tama.name} is tired!`;
+        return `${tama.name} is tired!`;
       }
     } else {
       return "You don't have this item!";
