@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <script type="text/javascript" src="bundle.js"></script> -->
     <title>Tamagotchi</title>
   </head>
   <body>
     <div class="container" id="background">
-      <div class="tama"></div>
-      <div class="weather"></div>
+      <div class="tama">
+        <img src="assets/images/tama-adult.gif">
+      </div>
+      <div class="interactions">
+        <button class="btn btn-success lg" id="feed">Feed Jeff!</button>
+        <button class="btn btn-success" id="play">Play!</button>
+      </div>
       <div class="location-form">
         <input id="location" type="text" placeholder = "Enter the name of your city!">
         <button class="btn-success" id="locationButton">Update background!</button>

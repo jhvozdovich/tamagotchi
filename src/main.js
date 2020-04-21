@@ -1,5 +1,6 @@
 // import 'bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+// import "./bootstrap.css";
 import './styles.css';
 import $ from "jquery";
 import rainy from './assets/images/rainy-background.jpg';

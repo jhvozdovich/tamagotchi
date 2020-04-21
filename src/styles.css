@@ -21,3 +21,27 @@ html, body {
 .location-form #location {
   background-color: rgb(175, 238, 240);
 }
+
+.tama {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 300px;
+}
+
+.tama img {
+  vertical-align: middle;
+}
+
+.interactions {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 5px;
+}
+
+.btn {
+  font-size: x-large;
+  padding: 2%;
+}
