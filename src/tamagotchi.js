@@ -43,6 +43,14 @@ export class Player {
   }
 }
 
+export class Item {
+  constructor (name, type, value) {
+    // this.name = name;
+    // this.type = type;
+    // this.value = value;
+  }
+}
+
 // export class LifeCycle {
 //   constructor (egg, toddler, tween, teen, adult) {
 //     this.egg = egg;

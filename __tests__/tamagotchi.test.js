@@ -1,5 +1,6 @@
 import { Tama } from "./../src/tamagotchi";
 import { Player } from "./../src/tamagotchi";
+import { Item } from "./../src/tamagotchi";
 
 
 describe('Tama', () => {
@@ -42,9 +43,7 @@ describe('Tama', () => {
 
   test('should test if a tomagotchi has died', () => {
     jest.advanceTimersByTime(18000001);
-    console.log("HEALTH " + jeff.health);
     jest.advanceTimersByTime(18000001);
-    console.log("HEALTH " + jeff.health);
     expect(jeff.alive).toEqual(false);
   });
 });
@@ -59,3 +58,13 @@ describe('Player', () => {
     expect(bloop.inventory).toEqual([]);
   });
 });
+
+describe('Item', () => {
+  test('should create a new toy item with a name, type, and value', () => {
+    let ball = new Item("Ball", "toy", 1);
+    expect(ball.name).toEqual("Ball");
+    expect(ball.type).toEqual("toy");
+    expect(ball.value).toEqual(1);
+  });
+});
+
