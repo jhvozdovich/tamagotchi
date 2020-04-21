@@ -145,6 +145,20 @@ describe('Player', () => {
     bloop.pickUpItem(ball);
     expect(bloop.inventory.length).toEqual(6);
   });
+
+  test("should remove an item in the inventory", () => {
+    let ball = new Item("Ball", "toy", 1);
+    let chocolate = new Food("Chocolate", "food", 1, true);
+    let carrot = new Food("Carrot", "food", 1, false);
+    bloop.pickUpItem(ball);
+    bloop.pickUpItem(chocolate);
+    bloop.pickUpItem(carrot);
+    expect(bloop.removeItem(chocolate)).toEqual([ball, carrot]);
+    bloop.pickUpItem(chocolate);
+    expect(bloop.removeItem(carrot)).toEqual([ball, chocolate]);
+    bloop.pickUpItem(carrot);
+    expect(bloop.removeItem(ball)).toEqual([chocolate, carrot]);
+  });
 });
 
 describe('Item', () => {

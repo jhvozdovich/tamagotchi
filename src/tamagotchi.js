@@ -50,6 +50,12 @@ export class Player {
     }
   }
 
+  removeItem(item) {
+    let index = this.inventory.indexOf(item);
+    this.inventory.splice(index, 1);
+    return this.inventory;
+  }
+
   //ADD LOGIC THAT REMOVES ITEM FROM INVENTORY
   useItem(item, tama){
     if (this.inventory.includes(item)){
