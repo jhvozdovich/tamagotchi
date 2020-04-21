@@ -1,4 +1,4 @@
-export class Tama {
+exeport class Tama {
   constructor (name) {
     this.name = name;
     this.hunger = 5;

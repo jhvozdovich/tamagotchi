@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+  margin: .25%;
+}
+
+#background {
+  background-image: url(./assets/images/tama-background.jpg);
+  display: block;
+  padding: 1%;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#locationButton {
+  color: green;
+  background-color: lightblue;
+}
+
+.location-form #location {
+  background-color: rgb(175, 238, 240);
+}

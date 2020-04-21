@@ -2,6 +2,9 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
+import rainy from './assets/images/rainy-background.jpg';
+import cloudy from './assets/images/cloudy-2.jpg';
+import sunny from './assets/images/sunny-background.jpg';
 // import { Tama } from './tamagotchi';
 // import { Player } from './tamagotchi';
 
@@ -24,13 +27,15 @@ $(document).ready(function() {
     request.send();
 
     const getElements = function(response) {
-      console.log(response.weather[0].main);
-      if (response.weather[0].main === "Rain" || response.weather[0].main === "Drizzle" || response.weather.main === "Thunderstorm") {
+      if (response.weather[0].main === "Rain" || response.weather[0].main === "Drizzle" || response.weather[0].main === "Thunderstorm") {
         $('.weather').text(`It is a rainy day!`);
+        document.getElementById("background").style.backgroundImage = `url(${rainy})`;
       } else if (response.weather[0].main === "Clouds") {
         $('.weather').text(`It is a cloudy day!`);
+        document.getElementById("background").style.backgroundImage = `url(${cloudy})`;
       } else {
         $('.weather').text(`It is a clear day!`);
+        document.getElementById("background").style.backgroundImage = `url(${sunny})`;
       }
     };
   });
