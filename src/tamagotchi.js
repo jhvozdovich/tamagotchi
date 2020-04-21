@@ -45,9 +45,9 @@ export class Player {
 
 export class Item {
   constructor (name, type, value) {
-    // this.name = name;
-    // this.type = type;
-    // this.value = value;
+    this.name = name;
+    this.type = type;
+    this.value = value;
   }
 }
 
