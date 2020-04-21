@@ -71,7 +71,7 @@ describe('Item', () => {
 
 describe('Food', () => {
   test('should create a new food item with a name, type, and value', () => {
-    let carrot = new Item("Carrot", "food", 1, false);
+    let carrot = new Food("Carrot", "food", 1, false);
     expect(carrot.name).toEqual("Carrot");
     expect(carrot.type).toEqual("food");
     expect(carrot.value).toEqual(1);
