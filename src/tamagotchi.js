@@ -41,6 +41,14 @@ export class Player {
     this.name = name;
     this.inventory = inventory || [];
   }
+
+  pickUpItem(item) {
+  //   if(this.inventory.length < 6) {
+  //     this.inventory.push(item);
+  //   } else {
+  //     return "Your bag is full!";
+  //   }
+  }
 }
 
 export class Item {

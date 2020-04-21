@@ -54,9 +54,16 @@ describe('Player', () => {
   beforeEach (() => {
     bloop = new Player ("Bloop");
   });
+
   test('should create a new character with a name and levels for hunger, happiness, health', () => {
     expect(bloop.name).toEqual("Bloop");
     expect(bloop.inventory).toEqual([]);
+  });
+
+  test('should add an item to Player inventory', () => {
+    let ball = new Item("Ball", "toy", 1);
+    bloop.pickUpItem(ball);
+    expect(this.inventory).toEqual([ball]);
   });
 });
 
