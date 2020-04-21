@@ -107,6 +107,11 @@ describe('Player', () => {
     bloop.useItem(gameboy, jeff);
     expect(bloop.useItem(ball, jeff)).toEqual("Jeff is tired!");
   });
+
+  test("should return an error if player attempts to use an item they don't have", () => {
+    let ball = new Item("Ball", "toy", 1);
+    expect(bloop.useItem(ball, jeff)).toEqual("You don't have this item!");
+  });
 });
 
 describe('Item', () => {

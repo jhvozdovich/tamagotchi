@@ -67,7 +67,7 @@ export class Player {
         return `${tama.name} is tired!`;
       }
     } else {
-      return "You don't have this item!";
+      // return "You don't have this item!";
     }  
   }
 }
