@@ -1,4 +1,4 @@
-export class Tamo {
+export class Tama {
   constructor (name) {
     this.name = name;
     this.hunger = 5;
@@ -28,16 +28,9 @@ export class Tamo {
       if (this.health <= 0) {
         this.alive = false;
       } else if (this.hunger === 0 && this.happiness === 0) {
-        // setTimeout(() => { 
         this.health -= 2;
-        //   this.decreaseHealth();
-        // }, 3600000);
-        
       } else if (this.hunger === 0 || this.happiness === 0) {
-        // setTimeout(() => {
         this.health -= 1;
-        //   this.decreaseHealth();
-        // },  3600000);
       } 
     }, 3600000);
   }

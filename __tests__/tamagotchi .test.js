@@ -1,13 +1,13 @@
-import { Tamo } from "./../src/tomagotchi";
-import { Player } from "./../src/tomagotchi";
+import { Tama } from "./../src/tamagotchi";
+import { Player } from "./../src/tamagotchi";
 
 
-describe('Tamo', () => {
+describe('Tama', () => {
   jest.useFakeTimers();
   let jeff;
 
   beforeEach (() => {
-    jeff = new Tamo("Jeff");
+    jeff = new Tama("Jeff");
     jeff.decreaseHunger();
     jeff.decreaseHappiness();
     jeff.decreaseHealth();
@@ -37,7 +37,6 @@ describe('Tamo', () => {
 
   test('should test if health levels are decreasing', () => {
     jest.advanceTimersByTime(18000001);
-    // jest.advanceTimersByTime(36000001);
     expect(jeff.health).toEqual(8);
   });
 
@@ -46,12 +45,6 @@ describe('Tamo', () => {
     console.log("HEALTH " + jeff.health);
     jest.advanceTimersByTime(18000001);
     console.log("HEALTH " + jeff.health);
-
-    // jest.advanceTimersByTime(3600001);
-    // jest.advanceTimersByTime(3600001);
-    // jest.advanceTimersByTime(3600001);
-    // jest.advanceTimersByTime(3600001);
-    // jest.advanceTimersByTime(3600001);
     expect(jeff.alive).toEqual(false);
   });
 });
