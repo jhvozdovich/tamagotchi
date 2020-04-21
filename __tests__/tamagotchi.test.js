@@ -98,6 +98,15 @@ describe('Player', () => {
     bloop.useItem(roast, jeff);
     expect(bloop.useItem(carrot, jeff)).toEqual("Jeff is full!");
   });
+
+  test("should return an error if player attempts to feed the tama when it is tired", () => {
+    let gameboy = new Item("GameBoy", "toy", 2);
+    let ball = new Item("Ball", "toy", 1);
+    bloop.pickUpItem(gameboy);
+    bloop.pickUpItem(ball);
+    bloop.useItem(gameboy, jeff);
+    expect(bloop.useItem(ball, jeff)).toEqual("Jeff is tired!");
+  });
 });
 
 describe('Item', () => {
