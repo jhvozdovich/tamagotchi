@@ -89,6 +89,15 @@ describe('Player', () => {
     bloop.useItem(ball, jeff);
     expect(jeff.happiness).toEqual(6);
   });
+  
+  test("should return an error if player attempts to feed the tama when it is full", () => {
+    let roast = new Food("Roast", "food", 2, false);
+    let carrot = new Food("Carrot", "food", 1, false);
+    bloop.pickUpItem(roast);
+    bloop.pickUpItem(carrot);
+    bloop.useItem(roast, jeff);
+    expect(bloop.useItem(carrot, jeff)).toEqual("Jeff is full!");
+  });
 });
 
 describe('Item', () => {
