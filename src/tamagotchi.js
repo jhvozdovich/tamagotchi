@@ -43,11 +43,11 @@ export class Player {
   }
 
   pickUpItem(item) {
-  //   if(this.inventory.length < 6) {
-  //     this.inventory.push(item);
-  //   } else {
-  //     return "Your bag is full!";
-  //   }
+    if(this.inventory.length < 6) {
+      this.inventory.push(item);
+    } else {
+      return "Your bag is full!";
+    }
   }
 }
 

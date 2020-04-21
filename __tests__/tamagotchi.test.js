@@ -63,7 +63,7 @@ describe('Player', () => {
   test('should add an item to Player inventory', () => {
     let ball = new Item("Ball", "toy", 1);
     bloop.pickUpItem(ball);
-    expect(this.inventory).toEqual([ball]);
+    expect(bloop.inventory).toEqual([ball]);
   });
 });
 
