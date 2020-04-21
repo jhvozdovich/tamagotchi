@@ -18,11 +18,11 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      itle: 'Tamagotchi',
+      title: 'Tamagotchi',
       template: './src/index.html',
       inject: 'body'
     }),
-    new Dotenv
+    new Dotenv()
   ],
   module: {
     rules: [
